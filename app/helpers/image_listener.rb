@@ -23,10 +23,10 @@ class ImageListener
 
   def self.merge_aws(file_paths)
 
-    all_existing_images = Image.all.map { |image| image.url }
+    #all_existing_images = Image.all.map { |image| image.url }
 
     file_paths.each do |path|
-      if path.include?(".jpg") && !all_existing_images.include?(path)
+      if path.include?(".jpg") #&& !all_existing_images.include?(path)
         new_image = create_new_image(path)
         event = find_corresponding_event(InstaFileParser.hashtags(InstaFileParser.remove_amazon(path)))
         if event.class == Event
