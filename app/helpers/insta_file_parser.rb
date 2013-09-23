@@ -1,4 +1,9 @@
 class InstaFileParser
+  @@ROOT_PATH = "https://s3-us-west-2.amazonaws.com/dbcvantagepoint/images/"
+
+  def self.remove_amazon(file_name)
+    file_name.gsub(/(https:\/\/s3-us-west-2.amazonaws.com\/dbcvantagepoint\/images\/)/, "")
+  end
 
   def self.date(file_name)
     # return a date object based on the filename
@@ -24,5 +29,7 @@ class InstaFileParser
   def self.caption(file_name)
     file_name[/(.*)_by_(.*)_on_(.*).jpg/,1].downcase
   end
+
+
 
 end
