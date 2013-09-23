@@ -13,7 +13,7 @@
 <% else %>
 <% @event.images.each do |image|  %>
 <div class="image">
-  <img class="event_img" src="/images/<%= image.url %>" class="image">
+  <img class="event_img" src="<%= image.url %>" class="image">
   <h6>Uploaded by: <%= image.user_name  %></h6>
   <h6>Taken at: <%= image.taken_at  %></h6>
 </div>

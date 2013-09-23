@@ -11,7 +11,7 @@
     <div class='event_format'>
       <p><a href="/event/<%= event.id %>"><%= event.name %></a></p>
       <% if event.images.first %>
-      <a href="/event/<%= event.id %>"><img class="event_img" src="/images/<%= event.images.first.url%>"></a>
+      <a href="/event/<%= event.id %>"><img class="event_img" src="<%= event.images.first.url%>"></a>
       <% else %>
       <a href="/event/<%= event.id %>"><img class="event_img" src="http://www.worldofchemicals.com/Woclite/tmp/chem/no_image.gif"></a>
       <% end %>
