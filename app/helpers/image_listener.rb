@@ -43,6 +43,7 @@ class ImageListener
         :access_key_id     => 'AKIAJS3XDBKLGTXNZYAQ',
         :secret_access_key => 'Gxyc0Zi5twbE4txD5Hs59VL/ysYwVplGGqCxxEIR'
       )
+      AWS::S3::DEFAULT_HOST.replace "s3-us-west-2.amazonaws.com"
 
       image_bucket = AWS::S3::Bucket.find('dbcvantagepoint')
 
