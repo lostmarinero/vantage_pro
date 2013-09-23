@@ -26,9 +26,9 @@ class ImageListener
     all_existing_images = Image.all.map { |image| image.url }
 
     file_paths.each do |path|
-      if file_name.include?(".jpg") && !all_existing_images.include?(file_name)
+      if path.include?(".jpg") && !all_existing_images.include?(path)
         new_image = create_new_image(path)
-        event = find_corresponding_event(InstaFileParser.hashtags(InstaFileParser.remove_amazon(file_name)))
+        event = find_corresponding_event(InstaFileParser.hashtags(InstaFileParser.remove_amazon(path)))
         if event.class == Event
           new_image.event = event
           new_image.save
