@@ -1,7 +1,10 @@
+require 'aws/s3'
+
 class ImageListener
 
   def self.create_new_image(file_name)
     shortened_path = InstaFileParser.remove_amazon(file_name)
+
     Image.create(name: InstaFileParser.caption(shortened_path),
             user_name: InstaFileParser.user_name(shortened_path),
              taken_at: InstaFileParser.date(shortened_path), 
