@@ -11,7 +11,7 @@ gem 'sinatra-contrib'
 gem 'thin'
 
 gem 'activesupport'
-gem 'activerecord'
+gem 'activerecord', '~>3.2.13'
 
 gem 'rake'
 
