@@ -128,7 +128,7 @@ task "start_listener" do
   ImageListener.start_listening
 end
 
-desc "Run the specs"
-RSpec::Core::RakeTask.new(:spec)
+# desc "Run the specs"
+# RSpec::Core::RakeTask.new(:spec)
 
-task :default  => :specs
+# task :default  => :specs
