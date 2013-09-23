@@ -43,12 +43,12 @@ class ImageListener
 
       image_bucket = AWS::S3::Bucket.find('dbcvantagepoint')
 
-      ROOT_PATH = "https://s3-us-west-2.amazonaws.com/"
+      root_path = "https://s3-us-west-2.amazonaws.com/"
 
       image_paths = []
 
       image_bucket.objects.map do |obj|
-        image_paths << (ROOT_PATH + obj.path)
+        image_paths << (root_path + obj.path)
       end
 
       ImageListener.merge_aws(image_paths)
