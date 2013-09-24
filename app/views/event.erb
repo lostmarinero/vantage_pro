@@ -11,7 +11,7 @@
 <p>And have fun!</p>
 </div>
 <% else %>
-<% @event.images.each do |image|  %>
+<% @event.images.reverse_each do |image|  %>
 <div class="image">
   <img class="event_img" src="<%= image.url %>" class="image">
   <h6>Uploaded by: <%= image.user_name  %></h6>

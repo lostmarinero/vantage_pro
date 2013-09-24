@@ -9,7 +9,7 @@
   <input class="refresh" type="submit" value="REFRESH">
 </form> -->
 <ul class="event_list"> 
-  <% @all_events.reverse_each do |event| %> 
+  <% @all_events.each do |event| %> 
     <div class='event_format'>
       <div class="navi" id="photo_list"><a href="/event/<%= event.id %>">#<%= event.tag %></a></div>
       <% if event.images.first %>
