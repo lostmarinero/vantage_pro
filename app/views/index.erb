@@ -5,9 +5,11 @@
   <input type="text" name="event[tag]" placeholder="Hashtag #">
   <input type="submit">
 </form>
-
+<form action='/refresh' method="GET">
+  <input type="submit" name="REFRESH">
+</form>
 <ul class="event_list"> 
-  <% @all_events.each do |event| %> 
+  <% @all_events.reverse_each do |event| %> 
     <div class='event_format'>
       <p><a href="/event/<%= event.id %>"><%= event.name %></a></p>
       <% if event.images.first %>
