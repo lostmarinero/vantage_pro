@@ -1,10 +1,8 @@
 
 
-
-
 Instagram.configure do |config|
-  config.client_id = $INSTA_CLIENT_ID
-  config.client_secret = $INSTA_CLIENT_SECRET
+  config.client_id = $CLIENT_ID
+  config.client_secret = $CLIENT_SECRET
 end
 
 
@@ -12,16 +10,7 @@ end
 
 get '/' do
   @all_events = Event.all
-  erb :index
-end
-
-get '/event/:id' do
-  @event = Event.find(params[:id])
-  erb :event
-end
-
-get '/refresh' do
-  results = Instagram.tag_recent_media("dbcvantagepoint")
+    results = Instagram.tag_recent_media("dbcvantagepoint")
   results.each do |image|
     new_image = Image.create(name: "image[:caption]",
             user_name: image[:user][:full_name],
@@ -35,20 +24,31 @@ get '/refresh' do
         next
       end
     end
-
-
-    puts "User ID: #{image[:user][:full_name]}"
-    puts "Image URL: #{image[:images][:standard_resolution][:url]}"
-    puts "Tags: #{image[:tags].to_s}"
-    puts
-
   end
 
-  redirect to('/')
-
-
-
+  erb :index
 end
+
+get '/event/:id' do
+  @event = Event.find(params[:id])
+  erb :event
+end
+
+# get '/refresh' do
+
+
+#     puts "User ID: #{image[:user][:full_name]}"
+#     puts "Image URL: #{image[:images][:standard_resolution][:url]}"
+#     puts "Tags: #{image[:tags].to_s}"
+#     puts
+
+#   end
+
+#   redirect to('/')
+
+
+
+
 
 
 

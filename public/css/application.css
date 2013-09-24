@@ -81,6 +81,10 @@ th {
       max-width: 480px;
       display: block;
       margin: 0 auto;
+        border-radius: 5px;
+    -moz-box-shadow:    0 1px 3px 2px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 1px 3px 2px rgba(0,0,0,0.1);
+    box-shadow:         0 1px 3px 2px rgba(0,0,0,0.1);
     }
 
 /* Event Page */
@@ -88,24 +92,54 @@ th {
 .navi{
   width: 100%;
   height: 50px;
-  background: #E89C31;
+  background: #6fb269;
   border-radius: 5px;
+  color: white;
+  border-radius: 5px;
+    -moz-box-shadow:    0 1px 3px 2px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 1px 3px 2px rgba(0,0,0,0.1);
+    box-shadow:         0 1px 3px 2px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+
 }
   .event_name{
-    font: normal 40px leaguecond;
+    font: normal 40px leaguereg;
     display: inline-block;
   }
   .navi a{
     float: left;
+    line-height: 99%;
     width: 80px;
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    padding-top: 2px;
+    font-size: 40px;
   }
   .navi h2{
-    width: 310px;
+    width: 260px;
     margin: 0 auto;
     text-align: center;
     display: inline-block;
+    
   }
-  span.event_hashtag{
-    float: right;
+  .event_hashtag{
+    display: inline-block;
     width: 80px;
-  }
+
+}
+
+#photo_list {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+#photo_list a {
+  width: 100%;
+  padding-top: 6px; 
+  padding-bottom: 10px
+}
+
+.refresh {
+  
+}

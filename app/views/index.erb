@@ -5,13 +5,13 @@
   <input type="text" name="event[tag]" placeholder="Hashtag #">
   <input type="submit">
 </form>
-<form action='/refresh' method="GET">
-  <input type="submit" name="REFRESH">
-</form>
+<!-- <form action='/refresh' method="GET">
+  <input class="refresh" type="submit" value="REFRESH">
+</form> -->
 <ul class="event_list"> 
   <% @all_events.reverse_each do |event| %> 
     <div class='event_format'>
-      <p><a href="/event/<%= event.id %>"><%= event.name %></a></p>
+      <div class="navi" id="photo_list"><a href="/event/<%= event.id %>">#<%= event.name %></a></div>
       <% if event.images.first %>
       <a href="/event/<%= event.id %>"><img class="event_img" src="<%= event.images.first.url%>"></a>
       <% else %>
