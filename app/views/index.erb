@@ -11,7 +11,7 @@
 <ul class="event_list"> 
   <% @all_events.reverse_each do |event| %> 
     <div class='event_format'>
-      <div class="navi" id="photo_list"><a href="/event/<%= event.id %>">#<%= event.name %></a></div>
+      <div class="navi" id="photo_list"><a href="/event/<%= event.id %>">#<%= event.tag %></a></div>
       <% if event.images.first %>
       <a href="/event/<%= event.id %>"><img class="event_img" src="<%= event.images.first.url%>"></a>
       <% else %>
