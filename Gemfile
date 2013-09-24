@@ -16,6 +16,7 @@ gem 'activerecord', '~>3.2.13'
 gem 'rake'
 
 gem 'aws-s3'
+gem 'instagram'
 
 gem 'shotgun'
 

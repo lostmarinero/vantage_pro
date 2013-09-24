@@ -23,9 +23,20 @@ GEM
     eventmachine (1.0.3)
     faker (1.2.0)
       i18n (~> 0.5)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
+    hashie (2.0.5)
     i18n (0.6.5)
+    instagram (0.10.0)
+      faraday (>= 0.7, < 0.9)
+      faraday_middleware (~> 0.8)
+      hashie (>= 0.4.0)
+      multi_json (~> 1.0, >= 1.0.3)
     mime-types (1.25)
     multi_json (1.8.0)
+    multipart-post (1.2.0)
     pg (0.17.0)
     rack (1.5.2)
     rack-protection (1.5.0)
@@ -62,6 +73,7 @@ DEPENDENCIES
   activesupport
   aws-s3
   faker
+  instagram
   pg
   rake
   shotgun
