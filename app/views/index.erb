@@ -5,9 +5,18 @@
   <input type="text" name="event[tag]" placeholder="Create Hashtag #">
   <input type="submit">
 </form>
-<!-- <form action='/refresh' method="GET">
-  <input class="refresh" type="submit" value="REFRESH">
-</form> -->
+
+<div class="instructions">
+  <h3>How to</h3>
+  <ol>
+    <li>Name the event</li>
+    <li>Pick a hashtag (leave out #)</li>
+    <li>Tag with #DBCvantagepoint and your hashtag</li>
+    <li>Party</li>
+  </ol>
+
+</div>
+
 <ul class="event_list"> 
   <% @all_events.each do |event| %> 
     <div class='event_format'>

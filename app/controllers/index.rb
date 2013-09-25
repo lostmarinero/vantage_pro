@@ -14,7 +14,7 @@ get '/' do
   results.each do |image|
     new_image = Image.create(name: "image[:caption]",
             user_name: image[:user][:full_name],
-             taken_at: image[:created_time],
+             taken_at: Time.at(image[:created_time].to_i).to_datetime,
                   url: image[:images][:standard_resolution][:url])
 
     image[:tags].each do |tag|

@@ -24,6 +24,7 @@
 
 body {
   background: #e7e7e7;
+  margin: 0 0 20px 0;
 }
 
 .container {
@@ -57,7 +58,7 @@ th {
       height: 40px;
       background: #fff;
       border-radius: 5px;
-      margin: 0;
+      margin: 1px 0;
       padding: 0;
       border: none;
       text-align: center;
@@ -72,6 +73,42 @@ th {
       text-transform: uppercase;
       color: #fff;
     }
+
+    .create_event input[type="submit"]:hover {
+      background: #750E31;
+    }
+
+.instructions {
+  background-color: #23546E;
+  opacity: 0.9;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  text-align: center;
+  -moz-box-shadow:    0 1px 3px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 3px 2px rgba(0,0,0,0.1);
+  box-shadow:         0 1px 3px 2px rgba(0,0,0,0.1);
+  padding: 10px;
+  margin: 20px 0 0 0;
+}
+
+.instructions h3 {
+  font: normal 32px leaguereg;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.instructions li {
+  margin: 5px 0;
+  text-align: left;
+  font-weight: lighter;
+
+}
+
+
+
+
   ul.event_list{
     margin: 0;
     padding: 0;
@@ -102,11 +139,17 @@ th {
     text-transform: uppercase;
 
 }
+
+.navi:hover{
+  background: #477243;
+
+}
   .event_name{
-    font: normal 40px leaguereg;
+    font: normal 36px leaguereg;
     display: inline-block;
   }
   .navi a{
+    font: normal 36px leaguereg;
     float: left;
     line-height: 99%;
     width: 80px;
@@ -131,7 +174,7 @@ th {
 
 #photo_list {
   margin-top: 20px;
-  margin-bottom: 0;
+  margin-bottom: 7px;
 }
 
 #photo_list a {
@@ -141,5 +184,5 @@ th {
 }
 
 .refresh {
-  
+
 }
