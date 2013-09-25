@@ -1,13 +1,8 @@
 class ChangeCreatedAtToInteger < ActiveRecord::Migration
-  def up
+  def change
     change_table :images do |t|
-      t.change :taken_at, :integer
+      t.change :taken_at, :datetime
     end
-  end
-
-  def down
-    change_table :images do |t|
-      t.change :taken_at, :date
-    end
+    add_index :images, :taken_at
   end
 end
