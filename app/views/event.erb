@@ -1,23 +1,23 @@
 <div class="navi">
-  <a href="/">Back</a>
+  <a href="/"><</a>
   <h2 class="event_name"><%= @event.name %></h2>
   <span class="event_hashtag">#<%= @event.tag %></span>
 </div>
 <br>
 <% if @event.images.to_a.length == 0 %>
-<div class="instruction">
-<p>You currently have no images for this event! </p>
-<p>To post new images, post images through instagram and tag them with #dbcvantagepoint and #<%= @event.tag %>!</p>
-<p>And have fun!</p>
-</div>
+  <div class="instruction">
+    <p>You currently have no images for this event! </p>
+    <p>To post new images, post images through instagram and tag them with #dbcvantagepoint and #<%= @event.tag %>!</p>
+    <p>And have fun!</p>
+  </div>
 <% else %>
-<% @event.images.each do |image|  %>
-<div class="image">
-  <img class="event_img" src="<%= image.url %>" class="image">
-  <h6>Uploaded by: <%= image.user_name  %></h6>
-  <h6>Taken at: <%= image.taken_at  %></h6>
-</div>
-<% end %>
+  <% @event.images.each do |image|  %>
+    <div class="image">
+      <img class="event_img" src="<%= image.url %>" class="image">
+      <h6>Uploaded by: <%= image.user_name  %></h6>
+      <h6>Taken at: <%= image.taken_at  %></h6>
+    </div>
+  <% end %>
 <% end %>
 
 

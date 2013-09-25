@@ -1,17 +1,26 @@
 <h1>DBC Vantage Point</h1>
 
 <form class="create_event" action="/create" method="POST">
-  <input type="text" name="event[name]" placeholder="Event Name">
-  <input type="text" name="event[tag]" placeholder="Hashtag #">
+  <input type="text" name="event[name]" placeholder="Create Event Name">
+  <input type="text" name="event[tag]" placeholder="Create Hashtag #">
   <input type="submit">
 </form>
-<form action='/refresh' method="GET">
-  <input type="submit" name="REFRESH">
-</form>
+
+<div class="instructions">
+  <h3>How to</h3>
+  <ol>
+    <li>Name the event</li>
+    <li>Pick a hashtag (leave out #)</li>
+    <li>Tag with #DBCvantagepoint and your hashtag</li>
+    <li>Party</li>
+  </ol>
+
+</div>
+
 <ul class="event_list"> 
-  <% @all_events.reverse_each do |event| %> 
+  <% @all_events.each do |event| %> 
     <div class='event_format'>
-      <p><a href="/event/<%= event.id %>"><%= event.name %></a></p>
+      <div class="navi" id="photo_list"><a href="/event/<%= event.id %>">#<%= event.tag %></a></div>
       <% if event.images.first %>
       <a href="/event/<%= event.id %>"><img class="event_img" src="<%= event.images.first.url%>"></a>
       <% else %>
