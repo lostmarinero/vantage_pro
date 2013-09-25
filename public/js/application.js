@@ -1,4 +1,7 @@
-// $(document).ready(function(){
+$(document).ready(function(){
+    // ('.create_event').show_prompt
+
+
 //    var time = new Date().getTime();
 //      $(document.body).bind("mousemove keypress", function(e) {
 //          time = new Date().getTime();
@@ -12,4 +15,4 @@
 //      }
 
 //      setTimeout(refresh, 30000);
-// });
+});
