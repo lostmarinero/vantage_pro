@@ -13,6 +13,9 @@ gem 'thin'
 gem 'activesupport'
 gem 'activerecord', '~>3.2.13'
 
+gem 'carrierwave'
+gem 'mini_magick'
+
 gem 'rake'
 
 gem 'aws-s3'

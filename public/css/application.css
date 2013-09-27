@@ -186,3 +186,72 @@ th {
 .refresh {
 
 }
+
+.upload_form {
+  margin: 20px auto;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  border: 1px solid #888;
+}
+
+.upload_form input {
+  display: block;
+  margin: 10px auto;
+}
+
+    .upload_form input[type="text"] {
+          width: 400px;
+          height: 40px;
+          background: #fff;
+          border-radius: 5px;
+          margin: 1px 0;
+          padding: 0;
+          border: none;
+          text-align: center;  
+    }
+ 
+    .upload_form select {
+          width: 400px;
+          height: 40px;
+          background: #fff;
+          border-radius: 5px;
+          margin: 1px 0;
+          padding: 0;
+          border: none;
+          text-align: center;  
+    }
+    .upload_form option {
+          width: 400px;
+          height: 40px;
+          background: #fff;
+          border-radius: 5px;
+          margin: 1px 0;
+          padding: 0;
+          border: none;
+          text-align: center;  
+    }
+
+
+    .upload_form input[type="submit"] {
+      width: 400px;
+      height: 40px;
+      background: #F51D66;
+      border: none;
+      border-radius: 5px;
+      font: normal 30px leaguereg;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+
+.upload_form label {
+  display: block;
+}
+
+
+
+
+
+
+

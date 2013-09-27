@@ -10,21 +10,22 @@ end
 
 get '/' do
   @all_events = Event.all
-    results = Instagram.tag_recent_media("dbcvantagepoint")
-  results.each do |image|
-    new_image = Image.create(name: "image[:caption]",
-            user_name: image[:user][:full_name],
-             taken_at: Time.at(image[:created_time].to_i).to_datetime,
-                  url: image[:images][:standard_resolution][:url])
+  
+  # results = Instagram.tag_recent_media("dbcvantagepoint")
+  # results.each do |image|
+  #   new_image = Image.create(name: "image[:caption]",
+  #           user_name: image[:user][:full_name],
+  #            taken_at: Time.at(image[:created_time].to_i).to_datetime,
+  #                 url: image[:images][:standard_resolution][:url])
 
-    image[:tags].each do |tag|
-      puts "tag #{tag}"
-      if new_image.event = Event.find_by_tag(tag)
-        new_image.save
-        next
-      end
-    end
-  end
+  #   image[:tags].each do |tag|
+  #     puts "tag #{tag}"
+  #     if new_image.event = Event.find_by_tag(tag)
+  #       new_image.save
+  #       next
+  #     end
+  #   end
+  # end
 
   erb :index
 end

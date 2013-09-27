@@ -30,22 +30,20 @@
   <% end %>
 </ul>
 
-<!-- <div class="container">
-  <h1>Welcome to VantagePoint!</h1>
-
-  <form action="/create" method="POST" class="event_input">
-      <label>Event Name: </label>
-      <input type="text" name="event[name]">
-      <label>Hashtag (no #): </label>
-      <input type="text" name="event[tag]">
-      <input type="submit">
-  </form>
-
-  <ul class="events"> 
-    <% @all_events.each do |event| %> 
-    <li> <a href="/event/<%= event.id %>"><%= event.name %></a></li>
-    <% end %>
-  </ul>
-
+<div class="upload_form">
+<form action="/upload" enctype="multipart/form-data">
+  <label for="new_image_file">
+  <input id="new_image_file" type="file" name="filename"></label>
+  <label for="new_image_event">
+    <select id="new_image_event">
+      <% @all_events.each do |event| %>
+        <option value="<%= event.name %>"><%= event.name %></option>
+      <% end %>
+    </select>
+  </label>
+  <label for="new_image_caption">
+    <input type="text" name="new_image_caption" placeholder="Caption">
+  </label>
+  <input type="submit" value="Upload">
+</form>
 </div>
- -->
