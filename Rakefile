@@ -123,6 +123,8 @@ task "console" do
   exec "irb -r./config/environment"
 end
 
+
+
 task "start_amazon_listening" do
   puts "Starting Image Listener..."
   ImageListener.start_amazon_listening
