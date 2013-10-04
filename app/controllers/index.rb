@@ -32,27 +32,40 @@ get '/' do
   erb :index
 end
 
+
+get '/api/event' do
+
+  event_json = {}
+
+  Event.all.each do |event|
+    event_json[event.id] = { id: event.id,
+                            name: event.name,
+                            tag: event.tag }
+  end
+  content_type :json
+  event_json.to_json
+end
+
+
+get '/api/event/:id' do
+  event_id_json = {}
+
+  Event.find(params[:id]).images.each do |image|
+    event_id_json[image.id] = {id: image.id,
+                              url: image.url,
+                              user_name: image.user_name,
+                              taken_at: image.taken_at }
+
+  end
+  content_type :json
+  event_id_json.to_json
+end
+
+
 get '/event/:id' do
   @event = Event.find(params[:id])
   erb :event
 end
-
-# get '/refresh' do
-
-
-#     puts "User ID: #{image[:user][:full_name]}"
-#     puts "Image URL: #{image[:images][:standard_resolution][:url]}"
-#     puts "Tags: #{image[:tags].to_s}"
-#     puts
-
-#   end
-
-#   redirect to('/')
-
-
-
-
-
 
 
 #====POST====#
