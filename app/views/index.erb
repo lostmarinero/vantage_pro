@@ -22,7 +22,7 @@
     <div class='event_format'>
       <div class="navi" id="photo_list"><a href="/event/<%= event.id %>">#<%= event.tag %></a></div>
       <% if event.images.first %>
-      <a href="/event/<%= event.id %>"><img class="event_img" src="<%= event.images.first.url%>"></a>
+      <a href="/event/<%= event.id %>"><img class="event_img" src="<%= event.images.last.url%>"></a>
       <% else %>
       <a href="/event/<%= event.id %>"><img class="event_img" src="images/placeholder_directions.png"></a>
       <% end %>
