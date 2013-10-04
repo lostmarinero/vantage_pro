@@ -64,6 +64,7 @@ end
 
 get '/event/:id' do
   @event = Event.find(params[:id])
+  @images = @event.images.order("created_at desc")
   erb :event
 end
 
