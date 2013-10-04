@@ -9,7 +9,7 @@ end
 #====GET====#
 
 get '/' do
-  @all_events = Event.all
+  @all_events = Event.order("created_at DESC")
   results = Instagram.tag_recent_media("dbcvantagepoint")
 
   puts results.inspect
