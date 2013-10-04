@@ -68,6 +68,11 @@ get '/event/:id' do
   erb :event
 end
 
+get '/slideshow/:event_id' do
+  @pictures = Image.where(event_id: params[:event_id])
+  erb :slideshow, layout: false
+end
+
 
 #====POST====#
 
@@ -79,3 +84,4 @@ post '/create' do
     redirect to '/'
   end
 end
+

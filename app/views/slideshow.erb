@@ -1,0 +1,43 @@
+
+<html>
+<head>
+  <style>
+    /* Prevents slides from flashing */
+    #slides {
+      display:none;
+    }
+  </style>
+
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/js/jquery.slides.min.js"></script>
+
+  <script>
+    $(function(){
+      $("#slides").slidesjs({
+        width: 700,
+        height: 700,
+         play: {
+          active: true,
+          auto: true,
+          interval: 4000,
+          swap: true,
+          pauseOnHover: true,
+          restartDelay: 2500
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="slides">
+    <% @pictures.each do |picture| %>
+      <img src=<%= picture.url%> >
+    <%end%>
+  </div>
+</body>
+</html>
+
+
+
