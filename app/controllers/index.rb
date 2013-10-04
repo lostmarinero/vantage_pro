@@ -15,7 +15,7 @@ get '/' do
   puts results.inspect
 
   results.each do |image|
-    new_image = Image.create(name: image[:caption],
+    new_image = Image.create(name: image[:caption][0..250],
             user_name: image[:user][:full_name],
              taken_at: Time.at(image[:created_time].to_i).to_datetime,
                   url: image[:images][:standard_resolution][:url])
@@ -60,7 +60,6 @@ end
 post '/create' do
   @event = Event.create(params[:event])
   if @event.valid?
-    # exec("mkdir public/images/events/\"#{@event.name}\"")
     erb :event
   else
     redirect to '/'

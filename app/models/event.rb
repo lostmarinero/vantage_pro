@@ -3,4 +3,13 @@ class Event < ActiveRecord::Base
 
   validates :name, presence: true, uniqueness: true
   validates :tag, presence: true, uniqueness: true
+
+  before_create :downcase_tag
+
+
+  protected
+
+  def downcase_tag
+    self.tag.downcase!
+  end
 end
